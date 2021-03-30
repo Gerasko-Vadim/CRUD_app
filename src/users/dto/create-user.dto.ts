@@ -1,5 +1,12 @@
+import { IsNumber, IsString } from "class-validator"
+
 export class CreateUserDto {
-    first_name:string
-    last_name:string
-    age:number
+   @IsString()
+   readonly first_name:string
+
+   @IsString()
+   readonly last_name:string
+
+   @IsNumber()
+   readonly age:number
 }
